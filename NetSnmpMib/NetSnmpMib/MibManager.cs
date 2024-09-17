@@ -82,7 +82,7 @@ public class MibManager
     {
         foreach (var table in parser.Tables.Values)
         {
-            string name = table.OidToName(oid);
+            var name = table.GetDescriptionByOid(oid);
             return name;
         }
 
